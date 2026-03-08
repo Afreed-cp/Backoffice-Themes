@@ -12,7 +12,7 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>Afreed</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>1.0.0</Version>
+    <Version>1.0.2</Version>
     <PackageIcon>assests/logos/logo-white.png</PackageIcon>
     <SignAssembly>False</SignAssembly>
     <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -22,6 +22,7 @@
     <PackageProjectUrl>https://github.com/Afreed-cp/Backoffice-Themes</PackageProjectUrl>
     <Tags>umbraco-marketplace</Tags>
     <RequireLicenseAcceptance>false</RequireLicenseAcceptance>
+    <PackageOutputPath>$(MSBuildThisFileDirectory)nupkgs</PackageOutputPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -39,10 +40,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <!-- Dont include the client folder as part of packaging nuget build -->
+    <!-- Don't include the client folder as part of packaging nuget build -->
     <Content Remove="BackofficeThemes\**" />
-
-    <!-- However make the Umbraco-package.json included for dotnet pack or nuget package and visible to the solution -->
+    <!-- Exclude from default SDK Content so our explicit Include below is the only one (avoids NETSDK1022 duplicate) -->
+    <Content Remove="App_Plugins\BackofficeThemes\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -50,11 +51,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="App_Plugins\BackofficeThemes\**\*" CopyToOutputDirectory="Always" />
+    <Content Include="App_Plugins\BackofficeThemes\**\*" CopyToOutputDirectory="Always" Pack="false" />
+  </ItemGroup>
 
-    <None Update="App_Plugins\BackofficeThemes\umbraco-package.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+  <ItemGroup>
+    <None Include="buildTransitive\**" Pack="true" PackagePath="buildTransitive" />
+  </ItemGroup>
+
+  <!-- Pack plugin files into package 'content' folder so buildTransitive targets can copy them -->
+  <ItemGroup>
+    <None Include="App_Plugins\BackofficeThemes\**\*" Pack="true" PackagePath="content\App_Plugins\BackofficeThemes\%(RecursiveDir)%(Filename)%(Extension)" />
   </ItemGroup>
 
 </Project>
