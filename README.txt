@@ -1,38 +1,34 @@
-      _       _              _                                                          
-     | |     | |            | |                                                         
-   __| | ___ | |_ _ __   ___| |_   _ __   _____      __                                 
-  / _` |/ _ \| __| '_ \ / _ \ __| | '_ \ / _ \ \ /\ / /                                 
- | (_| | (_) | |_| | | |  __/ |_  | | | |  __/\ V  V /                                  
-  \__,_|\___/ \__|_| |_|\___|\__| |_| |_|\___| \_/\_/   _                 _             
-                 | |                                   | |               (_)            
-  _   _ _ __ ___ | |__  _ __ __ _  ___ ___     _____  _| |_ ___ _ __  ___ _  ___  _ __  
- | | | | '_ ` _ \| '_ \| '__/ _` |/ __/ _ \   / _ \ \/ / __/ _ \ '_ \/ __| |/ _ \| '_ \ 
- | |_| | | | | | | |_) | | | (_| | (_| (_) | |  __/>  <| ||  __/ | | \__ \ | (_) | | | |
-  \__,_|_| |_| |_|_.__/|_|  \__,_|\___\___/   \___/_/\_\\__\___|_| |_|___/_|\___/|_| |_|
-                                                                                        
+# Backoffice Theme Bundle
 
-== Requirements ==
-* Node LTS Version 20.17.0+
-* Use a tool such as NVM (Node Version Manager) for your OS to help manage multiple versions of Node
+Extra themes for the Umbraco backoffice, including **Christmas** (theme + snow, lights, tree, Santa hat, etc.) and popular editor-style themes.
 
-== Node Version Manager tools ==
-* https://github.com/coreybutler/nvm-windows
-* https://github.com/nvm-sh/nvm
-* https://docs.volta.sh/guide/getting-started
+## Themes included
 
-== Steps ==
-* Open a terminal inside the `\Client` folder
-* Run `npm install` to install all the dependencies
-* Run `npm run build` to build the project
-* The build output is copied to `wwwroot\App_Plugins\BackofficeThemes\backoffice-themes.js`
+| Theme | Style |
+|-------|--------|
+| **Christmas 🎄** | Festive dark palette + effects (snow, lights, tree, Santa) when selected |
+| **Neon** | Synthwave / outrun – cyan & magenta on dark |
+| **Cyberpunk** | High-contrast pink & blue, chrome accents |
+| **Dracula** | Popular dark – purple background, candy accents |
+| **Monokai** | Classic high-contrast dark, charcoal + bright accents |
+| **VS Blue** | Visual Studio–style light with blue accent |
+| **VS Cool Breeze** | VS built-in – light with soft blue tint |
+| **VS Icy Mint** | VS built-in – light with mint green tint |
 
-== File Watching ==
-* Add this Razor Class Library Project as a project reference to an Umbraco Website project
-* From the `\Client` folder run the command `npm run watch` this will monitor the changes to the *.ts files and rebuild the project
-* With the Umbraco website project running the Razor Class Library Project will refresh the browser when the build is complete
+## Install
 
-== Suggestion ==
-* Use VSCode as the editor of choice as it has good tooling support for TypeScript and it will recommend a VSCode Extension for good Lit WebComponent completions
+1. Build the bundle:
+   ```bash
+   cd templates/ThemeBundle && npm install && npm run build
+   ```
+2. Copy to your site (`App_Plugins/ThemeBundle/`):
+   - `dist/umbraco-extension.js` and `dist/effects.entrypoint-*.js`
+   - `public/umbraco-package.json`
+   - All `public/*.theme.css` and `public/santahatlogo.svg`
+3. Restart the application or reload the backoffice. Themes appear in the theme picker; selecting **Christmas 🎄** enables the festive effects.
 
-== Other Resources ==
-* Umbraco Docs - https://docs.umbraco.com/umbraco-cms/customizing/overview
+## Add more themes
+
+1. Add a new `.theme.css` in `public/` using the same UUI variables as the existing themes (see `dark.theme.css` or any file in this bundle).
+2. Register it in `src/bundle.manifests.ts` with `type: "theme"`, a unique `alias`, `name`, and `css` path.
+3. Rebuild and redeploy.
