@@ -7,7 +7,7 @@ export default defineConfig({
       formats: ["es"],
       fileName: "umbraco-extension",
     },
-    outDir: "dist",
+    outDir: "../App_Plugins/BackofficeThemes",
     emptyOutDir: true,
     sourcemap: true,
     rollupOptions: {

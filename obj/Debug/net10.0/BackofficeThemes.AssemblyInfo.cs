@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BackofficeThemes")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3483d155a35612735e4ce3837770912dbf893951")]
 [assembly: System.Reflection.AssemblyProductAttribute("BackofficeThemes")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BackofficeThemes")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

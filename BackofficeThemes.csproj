@@ -14,7 +14,7 @@
 
   <ItemGroup>
     <!-- Dont include the client folder as part of packaging nuget build -->
-    <Content Remove="Client\**" />
+    <Content Remove="BackofficeThemes\**" />
 
     <!-- However make the Umbraco-package.json included for dotnet pack or nuget package and visible to the solution -->
   </ItemGroup>
@@ -24,7 +24,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <_ContentIncludedByDefault Remove="Client\package.json" />
+    <Content Include="App_Plugins\BackofficeThemes\**\*" CopyToOutputDirectory="Always" />
+
+    <None Update="App_Plugins\BackofficeThemes\umbraco-package.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
