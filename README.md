@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assests/logos/logo-white.png" alt="Backoffice Theme Bundle" width="280" />
+  <img src="https://raw.githubusercontent.com/Afreed-cp/Backoffice-Themes/refs/heads/main/assests/logos/logo-white.png" alt="Backoffice Theme Bundle" width="280" />
 </p>
 
 # Backoffice Theme Bundle
@@ -28,11 +28,11 @@ Extra themes for the Umbraco backoffice — including **Christmas** (theme + sno
 | | | |
 |:---:|:---:|:---:|
 | **Christmas** | **Neon** | **Cyberpunk** |
-| ![Christmas](assests/themes/Christmas.png) | ![Neon](assests/themes/Neon.png) | ![Cyberpunk](assests/themes/Cyberpunk.png) |
+| ![Christmas](https://raw.githubusercontent.com/Afreed-cp/Backoffice-Themes/refs/heads/main/assests/themes/Christmas.png) | ![Neon](https://raw.githubusercontent.com/Afreed-cp/Backoffice-Themes/refs/heads/main/assests/themes/Neon.png) | ![Cyberpunk](https://raw.githubusercontent.com/Afreed-cp/Backoffice-Themes/refs/heads/main/assests/themes/Cyberpunk.png) |
 | **Dracula** | **Monokai** | **VS Blue** |
-| ![Dracula](assests/themes/Dracula.png) | ![Monokai](assests/themes/Monokai.png) | ![VS Blue](assests/themes/VSBlue.png) |
+| ![Dracula](https://raw.githubusercontent.com/Afreed-cp/Backoffice-Themes/refs/heads/main/assests/themes/Dracula.png) | ![Monokai](https://raw.githubusercontent.com/Afreed-cp/Backoffice-Themes/refs/heads/main/assests/themes/Monokai.png) | ![VS Blue](https://raw.githubusercontent.com/Afreed-cp/Backoffice-Themes/refs/heads/main/assests/themes/VSBlue.png) |
 | **VS Cool Breeze** | **VS Icy Mint** | |
-| ![VS Cool Breeze](assests/themes/VSCoolBreeze.png) | ![VS Icy Mint](assests/themes/VSIcyMint.png) | |
+| ![VS Cool Breeze](https://raw.githubusercontent.com/Afreed-cp/Backoffice-Themes/refs/heads/main/assests/themes/VSCoolBreeze.png) | ![VS Icy Mint](https://raw.githubusercontent.com/Afreed-cp/Backoffice-Themes/refs/heads/main/assests/themes/VSIcyMint.png) | |
 
 ---
 
