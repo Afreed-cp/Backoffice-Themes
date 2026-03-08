@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assests/logos/logo.png" alt="Backoffice Theme Bundle" width="280" />
+  <img src="assests/logos/logo-white.png" alt="Backoffice Theme Bundle" width="280" />
 </p>
 
 # Backoffice Theme Bundle
