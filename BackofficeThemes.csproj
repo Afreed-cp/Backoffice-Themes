@@ -4,13 +4,39 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <StaticWebAssetBasePath>/</StaticWebAssetBasePath>
+    <PackageId>BackofficeThemes</PackageId>
+    <Product>Backoffice Theme Bundle</Product>
+    <Title>Backoffice Theme Bundle</Title>
+    <Description>Extra themes for the Umbraco backoffice — including Christmas (theme + snow, lights, tree, Santa hat) and popular editor-style themes.</Description>
+    <PackageTags>umbraco-marketplace;umbraco;backoffice;themes;christmas;dracula;neon;cyberpunk;monokai;editor-tools</PackageTags>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Authors>Afreed</Authors>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Version>1.0.0</Version>
+    <PackageIcon>assests/logos/logo-white.png</PackageIcon>
+    <SignAssembly>False</SignAssembly>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/Afreed-cp/Backoffice-Themes</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <Copyright>Afreed@2026</Copyright>
+    <PackageProjectUrl>https://github.com/Afreed-cp/Backoffice-Themes</PackageProjectUrl>
+    <Tags>umbraco-marketplace</Tags>
+    <RequireLicenseAcceptance>false</RequireLicenseAcceptance>
   </PropertyGroup>
 
-  <PropertyGroup>
-    <PackageId>BackofficeThemes</PackageId>
-    <Product>BackofficeThemes</Product>
-    <Title>BackofficeThemes</Title>
-  </PropertyGroup>
+  <ItemGroup>
+    <None Include="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="assests\logos\logo-white.png">
+      <PackagePath>\</PackagePath>
+      <Pack>True</Pack>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <!-- Dont include the client folder as part of packaging nuget build -->
