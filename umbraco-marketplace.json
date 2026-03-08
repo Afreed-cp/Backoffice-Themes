@@ -1,0 +1,61 @@
+{
+  "$schema": "https://marketplace.umbraco.com/umbraco-marketplace-schema.json",
+  "Title": "Backoffice Themes",
+  "AlternateCategory": "Editor Tools",
+  "Description": "Extra themes for the Umbraco backoffice — including Christmas (theme plus snow, lights, tree, Santa hat) and popular editor-style themes: Neon, Cyberpunk, Dracula, Monokai, VS Blue, VS Cool Breeze, and VS Icy Mint.",
+  "AuthorDetails": {
+    "Name": "Afreed",
+    "Description": "Afreed is a software engineer who enjoys building for the Umbraco community. He is a 2025 Umbraco MVP and works at Phases.",
+    "ImageUrl": "https://github.com/Afreed-cp.png",
+    "SyncContributorsFromRepository": true,
+    "Contributors": [
+      {
+        "Name": "Afreed",
+        "Url": "https://github.com/Afreed-cp"
+      }
+    ]
+  },
+  "Category": "Editor Tools",
+  "DocumentationUrl": "https://github.com/Afreed-cp/Backoffice-Themes/blob/main/README.md",
+  "LicenseTypes": ["Free"],
+  "IssueTrackerUrl": "https://github.com/Afreed-cp/Backoffice-Themes/issues",
+  "PackageType": "Package",
+  "LookingForContributors": true,
+  "LookingForMaintainer": false,
+  "VersionDependencyMode": "Default",
+  "Screenshots": [
+    {
+      "ImageUrl": "https://raw.githubusercontent.com/Afreed-cp/Backoffice-Themes/main/assests/themes/Christmas.png",
+      "Caption": "Christmas theme — festive dark palette with snow, lights, tree, and Santa"
+    },
+    {
+      "ImageUrl": "https://raw.githubusercontent.com/Afreed-cp/Backoffice-Themes/main/assests/themes/Neon.png",
+      "Caption": "Neon — synthwave / outrun, cyan & magenta on dark"
+    },
+    {
+      "ImageUrl": "https://raw.githubusercontent.com/Afreed-cp/Backoffice-Themes/main/assests/themes/Cyberpunk.png",
+      "Caption": "Cyberpunk — high-contrast pink & blue, chrome accents"
+    },
+    {
+      "ImageUrl": "https://raw.githubusercontent.com/Afreed-cp/Backoffice-Themes/main/assests/themes/Dracula.png",
+      "Caption": "Dracula — popular dark theme, purple background, candy accents"
+    },
+    {
+      "ImageUrl": "https://raw.githubusercontent.com/Afreed-cp/Backoffice-Themes/main/assests/themes/Monokai.png",
+      "Caption": "Monokai — classic high-contrast dark, charcoal + bright accents"
+    },
+    {
+      "ImageUrl": "https://raw.githubusercontent.com/Afreed-cp/Backoffice-Themes/main/assests/themes/VSBlue.png",
+      "Caption": "VS Blue — Visual Studio–style light with blue accent"
+    },
+    {
+      "ImageUrl": "https://raw.githubusercontent.com/Afreed-cp/Backoffice-Themes/main/assests/themes/VSCoolBreeze.png",
+      "Caption": "VS Cool Breeze — light with soft blue tint"
+    },
+    {
+      "ImageUrl": "https://raw.githubusercontent.com/Afreed-cp/Backoffice-Themes/main/assests/themes/VSIcyMint.png",
+      "Caption": "VS Icy Mint — light with mint green tint"
+    }
+  ],
+  "Tags": ["umbraco", "backoffice", "themes", "christmas", "dracula", "neon", "cyberpunk", "monokai", "editor-tools"]
+}
