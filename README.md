@@ -38,9 +38,9 @@ Extra themes for the Umbraco backoffice — including **Christmas** (theme + sno
 
 1. **Build the bundle**
    ```bash
-   cd templates/ThemeBundle && npm install && npm run build
+   cd BackofficeThemes && npm install && npm run build
    ```
-2. **Copy to your site** (`App_Plugins/ThemeBundle/`):
+2. **Copy to your site** (`BackofficeThemes/`):
    - `dist/umbraco-extension.js` and `dist/effects.entrypoint-*.js`
    - `public/umbraco-package.json`
    - All `public/*.theme.css` and `public/santahatlogo.svg`
