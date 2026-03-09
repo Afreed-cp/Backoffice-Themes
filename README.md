@@ -1,4 +1,4 @@
-![Backoffice Theme Bundle](https://raw.githubusercontent.com/Afreed-cp/Backoffice-Themes/refs/heads/main/assests/logos/logo-white.png)
+![Backoffice Theme Bundle](https://raw.githubusercontent.com/Afreed-cp/Backoffice-Themes/refs/heads/main/assests/logos/logo-250x250.png)
 
 # Backoffice Theme Bundle
 

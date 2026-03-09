@@ -12,8 +12,8 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>Afreed</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>1.0.3</Version>
-    <PackageIcon>assests/logos/logo-white.png</PackageIcon>
+    <Version>1.0.4</Version>
+    <PackageIcon>assests/logos/logo-250x250.png</PackageIcon>
     <SignAssembly>False</SignAssembly>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/Afreed-cp/Backoffice-Themes</RepositoryUrl>
