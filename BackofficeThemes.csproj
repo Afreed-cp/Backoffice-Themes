@@ -8,11 +8,11 @@
     <Product>Backoffice Theme Bundle</Product>
     <Title>Backoffice Theme Bundle</Title>
     <Description>Extra themes for the Umbraco backoffice — including Christmas (theme + snow, lights, tree, Santa hat) and popular editor-style themes.</Description>
-    <PackageTags>umbraco-marketplace;umbraco;backoffice;themes;christmas;dracula;neon;cyberpunk;monokai;editor-tools</PackageTags>
+    <PackageTags>umbraco plugin package;umbraco-marketplace;umbraco;backoffice;themes;christmas;dracula;neon;cyberpunk;monokai;editor-tools</PackageTags>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>Afreed</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <PackageIcon>assests/logos/logo-white.png</PackageIcon>
     <SignAssembly>False</SignAssembly>
     <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -24,6 +24,11 @@
     <RequireLicenseAcceptance>false</RequireLicenseAcceptance>
     <PackageOutputPath>$(MSBuildThisFileDirectory)nupkgs</PackageOutputPath>
   </PropertyGroup>
+
+  <!-- Umbraco dependency so marketplace can list and show version compatibility -->
+  <ItemGroup>
+    <PackageReference Include="Umbraco.Cms.Core" Version="[17.0.0,)" />
+  </ItemGroup>
 
   <ItemGroup>
     <None Include="README.md">

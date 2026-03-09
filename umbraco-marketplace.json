@@ -1,7 +1,7 @@
 {
   "$schema": "https://marketplace.umbraco.com/umbraco-marketplace-schema.json",
   "Title": "Backoffice Themes",
-  "AlternateCategory": "Editor Tools",
+  "AlternateCategory": "Themes & Starter Kits",
   "Description": "Extra themes for the Umbraco backoffice — including Christmas (theme plus snow, lights, tree, Santa hat) and popular editor-style themes: Neon, Cyberpunk, Dracula, Monokai, VS Blue, VS Cool Breeze, and VS Icy Mint.",
   "AuthorDetails": {
     "Name": "Afreed",

@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Afreed-cp/Backoffice-Themes/refs/heads/main/assests/logos/logo-white.png" alt="Backoffice Theme Bundle" width="280" />
-</p>
+![Backoffice Theme Bundle](https://raw.githubusercontent.com/Afreed-cp/Backoffice-Themes/refs/heads/main/assests/logos/logo-white.png)
 
 # Backoffice Theme Bundle
 
