@@ -7,13 +7,7 @@
     "Name": "Afreed",
     "Description": "Afreed is a software engineer who enjoys building for the Umbraco community. He is a 2025 Umbraco MVP and works at Phases.",
     "ImageUrl": "https://github.com/Afreed-cp.png",
-    "SyncContributorsFromRepository": true,
-    "Contributors": [
-      {
-        "Name": "Afreed",
-        "Url": "https://github.com/Afreed-cp"
-      }
-    ]
+    "SyncContributorsFromRepository": true
   },
   "Category": "Editor Tools",
   "DocumentationUrl": "https://github.com/Afreed-cp/Backoffice-Themes/blob/main/README.md",
