@@ -3,7 +3,7 @@
  * Swaps the Umbraco logo for a festive version.
  */
 
-const CHRISTMAS_LOGO_URL = "/App_Plugins/ThemeBundle/santahatlogo.svg";
+const CHRISTMAS_LOGO_URL = "/App_Plugins/BackofficeThemes/santahatlogo.svg";
 
 export class SantaHatDecorator {
     #originalSrc: string | null = null;
