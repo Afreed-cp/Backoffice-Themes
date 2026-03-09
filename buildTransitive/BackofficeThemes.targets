@@ -1,21 +1,39 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <BackofficeThemesContentFilesPath>$(MSBuildThisFileDirectory)..\content\App_Plugins\BackofficeThemes\**\*.*</BackofficeThemesContentFilesPath>
+    <!-- Fixed path to point to contentFiles in the NuGet package (same as Phases.Umbraco.NeatTip) -->
+    <BackofficeThemesContentFilesPath>$(MSBuildThisFileDirectory)..\contentFiles\any\any\App_Plugins\BackofficeThemes\**\*.*</BackofficeThemesContentFilesPath>
   </PropertyGroup>
 
   <Target Name="CopyBackofficeThemesAssets" BeforeTargets="BeforeBuild">
     <ItemGroup>
       <BackofficeThemesContentFiles Include="$(BackofficeThemesContentFilesPath)" />
     </ItemGroup>
-    <Message Text="Copying BackofficeThemes files: $(BackofficeThemesContentFilesPath) - #@(BackofficeThemesContentFiles->Count()) files" Importance="high" />
-    <Copy SourceFiles="@(BackofficeThemesContentFiles)" DestinationFiles="@(BackofficeThemesContentFiles->'$(MSBuildProjectDirectory)\App_Plugins\BackofficeThemes\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+    <Message Text="Copying BackofficeThemes files from: $(BackofficeThemesContentFilesPath) - #@(BackofficeThemesContentFiles->Count()) files" Importance="high" />
+    <Copy SourceFiles="@(BackofficeThemesContentFiles)"
+          DestinationFiles="@(BackofficeThemesContentFiles->'$(MSBuildProjectDirectory)\App_Plugins\BackofficeThemes\%(RecursiveDir)%(Filename)%(Extension)')"
+          SkipUnchangedFiles="true" />
   </Target>
 
   <Target Name="ClearBackofficeThemesAssets" BeforeTargets="Clean">
     <ItemGroup>
       <BackofficeThemesDir Include="$(MSBuildProjectDirectory)\App_Plugins\BackofficeThemes\" />
     </ItemGroup>
-    <Message Text="Clear old BackofficeThemes data" Importance="high" />
+    <Message Text="Clearing old BackofficeThemes data" Importance="high" />
     <RemoveDir Directories="@(BackofficeThemesDir)" />
+  </Target>
+
+  <!-- Include App_Plugins in publish output so they are available when Debug=false (Release) -->
+  <Target Name="IncludeBackofficeThemesInPublish" BeforeTargets="ComputeFilesToPublish">
+    <ItemGroup>
+      <BackofficeThemesPublishFiles Include="$(BackofficeThemesContentFilesPath)" />
+    </ItemGroup>
+    <ItemGroup Condition="'@(BackofficeThemesPublishFiles)' != ''">
+      <ResolvedFileToPublish Include="@(BackofficeThemesPublishFiles)" Exclude="@(ResolvedFileToPublish)">
+        <RelativePath>App_Plugins\BackofficeThemes\%(RecursiveDir)%(Filename)%(Extension)</RelativePath>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      </ResolvedFileToPublish>
+    </ItemGroup>
+    <Message Text="Including BackofficeThemes App_Plugins in publish (#@(BackofficeThemesPublishFiles->Count()) files)" Importance="high" />
   </Target>
 </Project>
